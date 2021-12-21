@@ -73,7 +73,7 @@ class MyApp extends StatelessWidget {
               ChatItem(
                   picPath: "assets/01.jpg",
                   name: "Mohammad Al Rafi",
-                  messege: "You: Yes I am talking to myself...",
+                  messege: "You: Yes I'm talking to myself:)",
                   isRead: true),
               SizedBox(
                 height: 15,
