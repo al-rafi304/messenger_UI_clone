@@ -46,25 +46,25 @@ class MyApp extends StatelessWidget {
               ChatItem(
                   picPath: "assets/05.jpg",
                   name: "Mohammad Ashik",
-                  messege: "This worked !",
-                  isRead: false),
-              SizedBox(
-                height: 15,
-              ),
-
-              ChatItem(
-                  picPath: "assets/04.jpg",
-                  name: "Rifat Al Mamun",
-                  messege: "You: Whats up Chika",
+                  messege: "Kakay ni",
                   isRead: true),
               SizedBox(
                 height: 15,
               ),
 
               ChatItem(
-                  picPath: "assets/02.jpg",
-                  name: "Arian",
-                  messege: "Testing Testing",
+                  picPath: "assets/04.jpg",
+                  name: "Mohammad Rifat",
+                  messege: "Ay gari gari kheli 🚗",
+                  isRead: false),
+              SizedBox(
+                height: 15,
+              ),
+
+              ChatItem(
+                  picPath: "assets/06.jpg",
+                  name: "Mr. Thanos",
+                  messege: "Reality is often dissapointing 😔",
                   isRead: false),
               SizedBox(
                 height: 15,
@@ -82,7 +82,7 @@ class MyApp extends StatelessWidget {
               ChatItem(
                   picPath: "assets/07.jpg",
                   name: "Asif Alam",
-                  messege: "Hau Mau Khau !",
+                  messege: "Hau Mau Khau !👻",
                   isRead: false),
               SizedBox(
                 height: 15,
@@ -99,7 +99,7 @@ class MyApp extends StatelessWidget {
 
               ChatItem(
                   picPath: "assets/12.jpg",
-                  name: "Rifat Al Mamun",
+                  name: "Mushfiq Hasan Rownak",
                   messege: "You: Assalamualaikum",
                   isRead: true),
               SizedBox(
@@ -108,7 +108,7 @@ class MyApp extends StatelessWidget {
 
               ChatItem(
                   picPath: "assets/10.jpg",
-                  name: "Arian",
+                  name: "Mehedi Hasan Nayem",
                   messege: "Ami nayeem huhahah",
                   isRead: false),
               SizedBox(
@@ -129,6 +129,15 @@ class MyApp extends StatelessWidget {
                   name: "Fahim Azom Rohan",
                   messege: "Yo Yo kids !",
                   isRead: false),
+              SizedBox(
+                height: 15,
+              ),
+              ChatItem(
+                  picPath: "assets/02.jpg",
+                  name: "Arian",
+                  messege: "Testing Testing",
+                  isRead: false),
+              
             ],
           ),
         ),
