@@ -54,11 +54,15 @@ class _ChatItemState extends State<ChatItem> {
                 ),
                 Row(
                   children: [
-                    Text(widget.messege,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        )),
+                    Container(
+                      width: 190,
+                      child: Text(widget.messege,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          )),
+                    ),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                       child: Text("- 12:40 am",
