@@ -111,7 +111,10 @@ class NameBubble extends StatelessWidget {
             fName,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.white, fontSize: 11),
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 11,
+              ),
           ),
           Text(
             lName,
