@@ -20,40 +20,40 @@ class Home extends StatelessWidget {
         ),
         elevation: 0,
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.black.withOpacity(0.9),
-        onTap: (int index) {
-          if (index==1){
-            Navigator.pushNamed(context, '/people');
-          }else if(index == 2){
-            Navigator.pushNamed(context, '/stories');
-          }
-        },
-        unselectedItemColor: Colors.grey,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.messenger_rounded,
-              color: Colors.blue,
-            ),
-            label: "Chat",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.people_rounded,
-              color: Colors.grey,
-            ),
-            label: "People",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.photo_library_rounded,
-              color: Colors.grey,
-            ),
-            label: "Stories",
-          ),
-        ],
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   backgroundColor: Colors.black.withOpacity(0.9),
+      //   onTap: (int index) {
+      //     if (index==1){
+      //       Navigator.pushNamed(context, '/people');
+      //     }else if(index == 2){
+      //       Navigator.pushNamed(context, '/stories');
+      //     }
+      //   },
+      //   unselectedItemColor: Colors.grey,
+      //   items: [
+      //     BottomNavigationBarItem(
+      //       icon: Icon(
+      //         Icons.messenger_rounded,
+      //         color: Colors.blue,
+      //       ),
+      //       label: "Chat",
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(
+      //         Icons.people_rounded,
+      //         color: Colors.grey,
+      //       ),
+      //       label: "People",
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(
+      //         Icons.photo_library_rounded,
+      //         color: Colors.grey,
+      //       ),
+      //       label: "Stories",
+      //     ),
+      //   ],
+      // ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
         child: SingleChildScrollView(
