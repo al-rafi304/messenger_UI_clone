@@ -14,7 +14,9 @@ class People extends StatelessWidget {
               children: [
                 Text(
                   "Active",
-                  style: TextStyle(color: Colors.white, ),
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
                   textAlign: TextAlign.center,
                 ),
               ],
@@ -27,27 +29,18 @@ class People extends StatelessWidget {
             scrollDirection: Axis.vertical,
             child: Column(
               children: [
+                PeoplesItem(name: 'Mohammad Al Rafi', picPath: 'assets/01.jpg'),
+                PeoplesItem(name: 'Arian', picPath: 'assets/02.jpg'),
                 PeoplesItem(name: 'Rk Biplob', picPath: 'assets/03.jpg'),
-                Divider(
-                  color: Colors.grey[900],
-                  thickness: 1,
-                  height: 20,
-                  indent: 50,
-                ),
-                PeoplesItem(name: 'Rk Biplob', picPath: 'assets/03.jpg'),
-                Divider(
-                  color: Colors.grey[900],
-                  thickness: 1,
-                  height: 20,
-                  indent: 50,
-                ),
-                PeoplesItem(name: 'Rk Biplob', picPath: 'assets/03.jpg'),
-                Divider(
-                  color: Colors.grey[900],
-                  thickness: 1,
-                  height: 20,
-                  indent: 50,
-                )
+                PeoplesItem(name: 'Mohammad Rifat', picPath: 'assets/04.jpg'),
+                PeoplesItem(name: 'Asif Alam', picPath: 'assets/07.jpg'),
+                PeoplesItem(name: 'Fahim Azom Rohan', picPath: 'assets/09.jpg'),
+                PeoplesItem(name: 'Sarowar Omi', picPath: 'assets/08.jpg'),
+                PeoplesItem(name: 'Mohammad Ashik', picPath: 'assets/05.jpg'),
+                PeoplesItem(name: 'Mehedi Hasan Nayem', picPath: 'assets/10.jpg'),
+                PeoplesItem(name: 'Mr. Thanos', picPath: 'assets/06.jpg'),
+                PeoplesItem(name: 'Mushfiq Hasan Rownak', picPath: 'assets/12.jpg'),
+                PeoplesItem(name: 'Sheikh Mohammad Tanveer', picPath: 'assets/11.jpg'),
               ],
             ),
           ),
@@ -64,18 +57,29 @@ class PeoplesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: Row(
+        child: Column(
       children: [
-        CircleAvatar(
-          backgroundImage: AssetImage(picPath),
+        Row(
+          children: [
+            CircleAvatar(
+              backgroundImage: AssetImage(picPath),
+            ),
+            SizedBox(
+              width: 12,
+            ),
+            Text(
+              name,
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            ),
+          ],
         ),
-        SizedBox(
-          width: 12,
-        ),
-        Text(
-          name,
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-        ),
+        Divider(
+                  color: Colors.grey[900],
+                  thickness: 1,
+                  height: 19,
+                  indent: 50,
+                )
       ],
     ));
   }
