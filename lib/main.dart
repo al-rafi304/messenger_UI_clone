@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'ChatItem.dart';
 import 'QuickAccess.dart';
 
@@ -14,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
+          extendBody: true,
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
@@ -24,6 +24,35 @@ class MyApp extends StatelessWidget {
           ),
         ),
         elevation: 0,
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.black.withOpacity(0.9),
+        
+        unselectedItemColor: Colors.grey,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.messenger_rounded,
+              color: Colors.blue,
+              ),
+            label: "Chat",
+
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.people_rounded,
+              color: Colors.grey,
+              ),
+            label: "People",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.photo_library_rounded,
+              color: Colors.grey,
+              ),
+            label: "Stories",
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
