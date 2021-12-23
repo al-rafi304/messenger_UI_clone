@@ -16,13 +16,12 @@ class ChatItem extends StatefulWidget {
 class _ChatItemState extends State<ChatItem> {
   @override
   Widget build(BuildContext context) {
-    if (widget.isRead == false) {
       //Unread state
       return GestureDetector(
         onTap: () {
           print("Tapped !");
           setState(() {
-            widget.isRead = true;
+            widget.isRead = !widget.isRead;
           });
         },
         
@@ -40,10 +39,12 @@ class _ChatItemState extends State<ChatItem> {
                   Row(
                     children: [
                       Text(widget.name,
-                          style: TextStyle(
+                          style: !widget.isRead ? TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
-                              fontSize: 15)),
+                              fontSize: 15)
+                              : TextStyle(color: Colors.white, fontSize: 15),
+                              ),
                     ],
                   ),
                   Row(
@@ -52,10 +53,14 @@ class _ChatItemState extends State<ChatItem> {
                         constraints: BoxConstraints(maxWidth: 190),
                         child: Text(widget.messege,
                             overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
+                            style: !widget.isRead ? TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
-                            )),
+                            )
+                            : TextStyle(
+                              color: Colors.grey[700]
+                            )
+                            ),
                       ),
                       Padding(
                         padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
@@ -67,7 +72,7 @@ class _ChatItemState extends State<ChatItem> {
                 ],
               ),
             ),
-            Expanded(
+            !widget.isRead ? Expanded(
               child: Align(
                 alignment: Alignment.centerRight,
                 child: Container(
@@ -80,58 +85,10 @@ class _ChatItemState extends State<ChatItem> {
                 ),
               ),
             )
+            : Text('')
           ],
         ),
       );
-    } else {
-      //Read State
-      return GestureDetector(
-        onTap: () {
-          setState(() {
-            widget.isRead = false;
-          });
-        },
-        child: Row(
-          children: [
-            CircleAvatar(
-              backgroundImage: AssetImage(widget.picPath),
-              radius: 28,
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(12, 0, 0, 0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(children: [
-                    Text(widget.name,
-                        style: TextStyle(color: Colors.white, fontSize: 15)),
-                    
-                  ]),
-                  Row(
-                    children: [
-                      Container(
-                        constraints: BoxConstraints(maxWidth: 190),
-                        child: Text(widget.messege,
-                            style: TextStyle(
-                              color: Colors.grey[700],
-                            ), 
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                            
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                        child: Text("- 12:40 am",
-                            style: TextStyle(color: Colors.grey[700])),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      );
-    }
+    
   }
 }
