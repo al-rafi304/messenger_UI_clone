@@ -6,16 +6,6 @@ class Stories extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.black,
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: Center(
-            child: Text(
-              "Stories",
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-            ),
-          ),
-        ),
         body: Padding(
           padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
           child: GridView.count(

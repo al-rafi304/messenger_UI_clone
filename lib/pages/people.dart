@@ -6,24 +6,6 @@ class People extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.black,
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  "People",
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ],
-            ),
-          ),
-        ),
         body: Padding(
           padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
           child: SingleChildScrollView(

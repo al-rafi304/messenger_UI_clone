@@ -2,24 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:messenger_ui/ChatItem.dart';
 import 'package:messenger_ui/QuickAccess.dart';
 
-
 class Home extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
       backgroundColor: Colors.black,
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Center(
-          child: Text(
-            "Chats",
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-          ),
-        ),
-        elevation: 0,
-      ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
         child: SingleChildScrollView(
@@ -29,43 +17,43 @@ class Home extends StatelessWidget {
               QuickAccess(),
               SizedBox(height: 20),
               ChatItem(
-                  picPath: "assets/03.jpg",
-                  name: "Rk Biplob",
-                  messege: "Ami onek boro Poita !",
-                  isRead: false,
-                  isActive: true,
-                  ),
+                picPath: "assets/03.jpg",
+                name: "Rk Biplob",
+                messege: "Ami onek boro Poita !",
+                isRead: false,
+                isActive: true,
+              ),
               SizedBox(
                 height: 15,
               ),
               ChatItem(
-                  picPath: "assets/05.jpg",
-                  name: "Mohammad Ashik",
-                  messege: "Kakay ni",
-                  isRead: true,
-                  hasStory: true,
-                  isActive: true,
-                  ),
+                picPath: "assets/05.jpg",
+                name: "Mohammad Ashik",
+                messege: "Kakay ni",
+                isRead: true,
+                hasStory: true,
+                isActive: true,
+              ),
               SizedBox(
                 height: 15,
               ),
               ChatItem(
-                  picPath: "assets/04.jpg",
-                  name: "Mohammad Rifat",
-                  messege: "Ay gari gari kheli 🚗",
-                  isRead: false,
-                  hasStory: true,
-                  ),
+                picPath: "assets/04.jpg",
+                name: "Mohammad Rifat",
+                messege: "Ay gari gari kheli 🚗",
+                isRead: false,
+                hasStory: true,
+              ),
               SizedBox(
                 height: 15,
               ),
               ChatItem(
-                  picPath: "assets/06.jpg",
-                  name: "Mr. Thanos",
-                  messege: "Reality is often dissapointing 😔",
-                  isRead: false,
-                  hasStory: true,
-                  ),
+                picPath: "assets/06.jpg",
+                name: "Mr. Thanos",
+                messege: "Reality is often dissapointing 😔",
+                isRead: false,
+                hasStory: true,
+              ),
               SizedBox(
                 height: 15,
               ),
@@ -78,12 +66,12 @@ class Home extends StatelessWidget {
                 height: 15,
               ),
               ChatItem(
-                  picPath: "assets/07.jpg",
-                  name: "Asif Alam",
-                  messege: "Hau Mau Khau !👻",
-                  isRead: false,
-                  isActive: true,
-                  ),
+                picPath: "assets/07.jpg",
+                name: "Asif Alam",
+                messege: "Hau Mau Khau !👻",
+                isRead: false,
+                isActive: true,
+              ),
               SizedBox(
                 height: 15,
               ),
