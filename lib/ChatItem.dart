@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-
+import 'package:messenger_ui/AvatarBubble.dart';
 
 class ChatItem extends StatefulWidget {
   final String picPath;
   final String name;
   final String messege;
+  final bool hasStory;
+  final bool isActive;
   bool isRead;
 
-  ChatItem({this.picPath, this.name, this.messege, this.isRead});
+  ChatItem({this.picPath, this.name, this.messege, this.isRead, this.isActive = false, this.hasStory = false});
 
   @override
   _ChatItemState createState() => _ChatItemState();
@@ -27,10 +29,7 @@ class _ChatItemState extends State<ChatItem> {
         
         child: Row(
           children: [
-            CircleAvatar(
-              backgroundImage: AssetImage(widget.picPath),
-              radius: 28,
-            ),
+            AvatarBubble(picPath: widget.picPath, radius: 28, hasStory: widget.hasStory, isActive: widget.isActive),
             Padding(
               padding: const EdgeInsets.fromLTRB(12, 0, 0, 0),
               child: Column(

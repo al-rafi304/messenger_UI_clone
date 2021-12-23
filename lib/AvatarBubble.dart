@@ -27,10 +27,10 @@ class AvatarBubble extends StatelessWidget {
               alignment: Alignment.bottomRight,
               child: CircleAvatar(          // Active Black Border
                 backgroundColor: Colors.black,
-                radius: 8.5,
+                radius: 8.5, //8.5  radius * (39/56)
                 child: CircleAvatar(        // Active Green fill
                   backgroundColor: Colors.green,
-                  radius: 6,
+                  radius: 6,   //6   radius * (11/14)
                 ),
               ),
             )

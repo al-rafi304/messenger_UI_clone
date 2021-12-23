@@ -32,7 +32,9 @@ class Home extends StatelessWidget {
                   picPath: "assets/03.jpg",
                   name: "Rk Biplob",
                   messege: "Ami onek boro Poita !",
-                  isRead: false),
+                  isRead: false,
+                  isActive: true,
+                  ),
               SizedBox(
                 height: 15,
               ),
@@ -40,7 +42,10 @@ class Home extends StatelessWidget {
                   picPath: "assets/05.jpg",
                   name: "Mohammad Ashik",
                   messege: "Kakay ni",
-                  isRead: true),
+                  isRead: true,
+                  hasStory: true,
+                  isActive: true,
+                  ),
               SizedBox(
                 height: 15,
               ),
@@ -48,7 +53,9 @@ class Home extends StatelessWidget {
                   picPath: "assets/04.jpg",
                   name: "Mohammad Rifat",
                   messege: "Ay gari gari kheli 🚗",
-                  isRead: false),
+                  isRead: false,
+                  hasStory: true,
+                  ),
               SizedBox(
                 height: 15,
               ),
@@ -56,7 +63,9 @@ class Home extends StatelessWidget {
                   picPath: "assets/06.jpg",
                   name: "Mr. Thanos",
                   messege: "Reality is often dissapointing 😔",
-                  isRead: false),
+                  isRead: false,
+                  hasStory: true,
+                  ),
               SizedBox(
                 height: 15,
               ),
@@ -72,7 +81,9 @@ class Home extends StatelessWidget {
                   picPath: "assets/07.jpg",
                   name: "Asif Alam",
                   messege: "Hau Mau Khau !👻",
-                  isRead: false),
+                  isRead: false,
+                  isActive: true,
+                  ),
               SizedBox(
                 height: 15,
               ),
@@ -80,6 +91,8 @@ class Home extends StatelessWidget {
                   picPath: "assets/08.jpg",
                   name: "Sarwar Omi",
                   messege: "You: Ki obostha bro !",
+                  hasStory: true,
+                  isActive: true,
                   isRead: true),
               SizedBox(
                 height: 15,
@@ -96,6 +109,7 @@ class Home extends StatelessWidget {
                   picPath: "assets/10.jpg",
                   name: "Mehedi Hasan Nayem",
                   messege: "Ami nayeem huhahah",
+                  isActive: true,
                   isRead: false),
               SizedBox(
                 height: 15,
@@ -112,6 +126,8 @@ class Home extends StatelessWidget {
                   picPath: "assets/09.jpg",
                   name: "Fahim Azom Rohan",
                   messege: "Yo Yo kids !",
+                  hasStory: true,
+                  isActive: true,
                   isRead: false),
               SizedBox(
                 height: 15,

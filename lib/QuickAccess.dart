@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:messenger_ui/AvatarBubble.dart';
 
 class QuickAccess extends StatelessWidget {
   @override
@@ -36,47 +37,47 @@ class QuickAccess extends StatelessWidget {
             ],
           ),
           SizedBox(width: 18,),
-          NameBubble(
+          QuickAccessItem(
             fName: "Mohammad",
             lName: "Al Rafi",
             picPath: "assets/01.jpg",
           ),
-          NameBubble(
+          QuickAccessItem(
             fName: "Mohammad",
             lName: "Rifat",
             picPath: "assets/04.jpg",
           ),
-          NameBubble(
+          QuickAccessItem(
             fName: "Rk",
             lName: "Biplob",
             picPath: "assets/03.jpg",
           ),
-          NameBubble(
+          QuickAccessItem(
             fName: "Asif",
             lName: "Alam",
             picPath: "assets/07.jpg",
           ),
-          NameBubble(
+          QuickAccessItem(
             fName: "Sheikh",
             lName: "Mohammad Tanveer",
             picPath: "assets/11.jpg",
           ),
-          NameBubble(
+          QuickAccessItem(
             fName: "Fahim AzomRohan",
             lName: "Rohan",
             picPath: "assets/09.jpg",
           ),
-          NameBubble(
+          QuickAccessItem(
             fName: "Mehedi Hasan",
             lName: "Nayeem",
             picPath: "assets/10.jpg",
           ),
-          NameBubble(
+          QuickAccessItem(
             fName: "Mr.",
             lName: "Thanos",
             picPath: "assets/06.jpg",
           ),
-          NameBubble(
+          QuickAccessItem(
             fName: "Sarowar",
             lName: "Omi",
             picPath: "assets/08.jpg",
@@ -88,12 +89,14 @@ class QuickAccess extends StatelessWidget {
   }
 }
 
-class NameBubble extends StatelessWidget {
+class QuickAccessItem extends StatelessWidget {
   final String picPath;
   final String fName;
   final String lName;
+  final bool isActive;
+  final bool hasStory;
 
-  NameBubble({this.picPath, this.fName, this.lName});
+  QuickAccessItem({this.picPath, this.fName, this.lName, this.isActive = false, this.hasStory = false});
 
   @override
   Widget build(BuildContext context) {
@@ -102,10 +105,7 @@ class NameBubble extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          CircleAvatar(
-            backgroundImage: AssetImage(picPath),
-            radius: 28,
-          ),
+          AvatarBubble(picPath: picPath, radius: 28, isActive: true),
           SizedBox(height: 5),
           Text(
             fName,

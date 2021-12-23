@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:messenger_ui/AvatarBubble.dart';
 
 class Stories extends StatelessWidget {
   @override
@@ -43,11 +44,13 @@ class Stories extends StatelessWidget {
                 name: 'Mohammad Asif',
                 profilePicPath: 'assets/07.jpg',
                 storyPicPath: 'assets/Story07.jpg',
+                isActive: true,
               ),
               StoryBlock(
                 name: 'Sheikh Mohammad Tanveer',
                 profilePicPath: 'assets/11.jpg',
                 storyPicPath: 'assets/Story11.jpg',
+                isActive: true,
               ),
               StoryBlock(
                 name: 'Mohammad Ashik',
@@ -96,9 +99,10 @@ class StoryBlock extends StatelessWidget {
   final String name;
   final int storyCount;
   final bool isDefault;
+  final bool isActive;
 
   StoryBlock(
-      {this.name, this.storyPicPath, this.profilePicPath, this.storyCount = 1, this.isDefault = false});
+      {this.name, this.storyPicPath, this.profilePicPath, this.storyCount = 1, this.isActive = false, this.isDefault = false});
 
   @override
   Widget build(BuildContext context) {
@@ -118,14 +122,7 @@ class StoryBlock extends StatelessWidget {
             children: [
               Row(
                 children: isDefault == false ? [
-                  CircleAvatar(
-                    backgroundColor: Colors.blue,
-                    maxRadius: 18,
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage(profilePicPath),
-                      maxRadius: 15,
-                    ),
-                  ),
+                  AvatarBubble(picPath: profilePicPath, radius: 18, hasStory: true, isActive: isActive,),
                   Expanded(
                     child: Align(
                       alignment: Alignment.topRight,
