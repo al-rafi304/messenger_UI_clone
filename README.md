@@ -1,16 +1,28 @@
-# messenger_ui
+# Messenger App Replica
 
-A new Flutter project.
+A replica of Facebook's messenger app made with Flutter. This app does not have any backend services, it's only a replica of the UI.  
+It is my first independent project with Flutter so codes are probably not polished and optimized enough.
 
-## Getting Started
+## Functionalities
+**Project is still in development process**
+ 
+- ✅ Chat home page
+- ✅ Peoples page
+- ✅ Stories page
+- ✅ Active status
+- ✅ Story status
+- ✅ Messege Read/Unread state
+- ❌ Inbox/messeging page
+- ❌ Settings page
+- ❌ New messege page
+- ❌ Contacts page
+- ❌ Viewing stories
+- ❌ Search Bar
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
+**Doesn't have an apk build yet**
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+After installing Flutter and setting up an emulator just run this command
+`flutter run`
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
